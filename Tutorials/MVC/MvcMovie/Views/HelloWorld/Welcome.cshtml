@@ -1,0 +1,10 @@
+@{
+    ViewData["title"] = "Movie List";
+}
+
+<h2>Welcome</h2>
+
+<p>@ViewData["Message"]</p>
+@for(int i=0;i<(int)ViewData["ID"];i++){
+    <li>@i</li>
+}
