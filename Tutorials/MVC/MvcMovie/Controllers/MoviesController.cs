@@ -84,8 +84,10 @@ namespace MvcMovie.Controllers
         // POST: Movies/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+
+        //only post requests allowed
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        [ValidateAntiForgeryToken]  //anti forgery token pairs up with token in cshtml generation to prevent forgery of request
         public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Price")] Movie movie)
         {
             if (id != movie.Id)
