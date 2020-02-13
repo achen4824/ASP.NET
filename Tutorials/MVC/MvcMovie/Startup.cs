@@ -1,3 +1,5 @@
+using MvcMovie.Data;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +25,8 @@ namespace MvcMovie
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<MvcMovieContext>(options =>
+                options.UseSqlite(Configuration.GetConnectionString("MvcMovieContext")));
             services.AddControllersWithViews();
         }
 
