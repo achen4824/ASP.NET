@@ -38,7 +38,21 @@ Repository for ASP.NET tutorials and other assorted projects used for gaining ex
     * *Startup.cs*  at the bottom near endpoints specifies the format for requests. By default it is set *"controller/action/id?"* Test this with the link `localhost:5001/HelloWorld/Welcome/4?name=Andrew`
     * As mentioned before in Controllers are the controllers for each route. They manage requests by either directing through `Views()` or returning themselves.
     * In the views cshtml options such as *asp-controller*, or *asp-action* can be added to a-links as requests instead of writing `src="controller/link"`
+    * Learned Data Annotations, displayname/variablename.
+
 
     **[Future Reference MVC](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/adding-controller?view=aspnetcore-3.1&tabs=visual-studio)**
 
-* **[Web API](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-3.1&tabs=visual-studio)** - Creating a web API 
+**Note:** MVC is different from Web API in that it generally returns View + Data and Web API just returns Data making Web API more lightweight.
+
+* **[Web API](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-3.1&tabs=visual-studio)** - Creating a web API. No more nice C# preprocessed view before returning. Web API only sends information where a frontend framework like ReactJS or Angular. Not to happy to be using javascript again.
+
+    **Scaffold Controller for Web API**
+    ```
+    dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
+    dotnet add package Microsoft.EntityFrameworkCore.Design
+    dotnet tool install --global dotnet-aspnet-codegenerator
+    dotnet aspnet-codegenerator controller -name TodoItemsController -async -api -m TodoItem -dc TodoContext -outDir Controllers
+    ```
+
+
