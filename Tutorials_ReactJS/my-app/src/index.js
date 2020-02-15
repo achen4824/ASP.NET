@@ -8,12 +8,14 @@ class Square extends React.Component {
     super(props);
     this.state = {
       value : null,
+      number : this.props.number,
     };
   }
   render() {
     return (
       <button
         className="square"
+        onClick={() => this.props.onClick(this.state.number)}
       >
         {this.state.value}
       </button>
@@ -37,8 +39,9 @@ class Board extends React.Component {
     }else{
       this.state.square[i] = 'O';
     }
+    this.setState({square : this.state.square});
     this.renderSquare(i);
-    console.log(this.state.square[i]);
+    console.log(this.state.square);
     var winner = true;
 
     //check row
@@ -78,13 +81,14 @@ class Board extends React.Component {
     }
 
     if(winner){
-      alert(this.state.square[i] + " Wins");
+      console.log(this.state.square[i] + " Wins");
     }
     this.state.move++;
   }
 
   renderSquare(i) {
     return <Square
+              number = {i}
               value={this.state.square[i] /* Modify square component state directly */} 
               onClick={() => this.handleClick(i)}
             />;
