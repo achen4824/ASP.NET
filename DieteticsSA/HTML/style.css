@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	height:1500px;
+	margin: 0px;
+	padding: 0px;
+	background-image: url("images/background.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+.wrapper{
+	margin-left: 7.5%;
+	margin-right: 7.5%;
+	height: 100%;
+	width: 85%;
+}
+
+.header{
+	height: 400px;
+	width: 100%;
+}
+
+.container{
+	height: 100%;
+	width: 100%;
+}
