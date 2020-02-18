@@ -7,8 +7,8 @@
 }
 
 @font-face {
-font-family: secondFont;
-src: url(fonts/JosefinSans-Regular.ttf);
+	font-family: secondFont;
+	src: url(fonts/JosefinSans-Regular.ttf);
 }
 
 body{
@@ -19,58 +19,6 @@ body{
 	background-repeat: repeat;
 }
 
-#logo{
-	margin-left: 20px;
-	margin-top: 20px;
-	max-width: 75%;
-	max-height: 75%;
-	transform: rotate(160deg);
-	transition: 0.5s all ease-in;
-}
-
-.wrapper{
-	margin-left: 7.5%;
-	margin-right: 7.5%;
-	height: 100%;
-	width: 85%;
-}
-
-.header{
-	height: 300px;
-	width: 100%;
-	text-align: center;
-}
-
-#title{
-	display:inline-block;
-	vertical-align: top;
-	margin-top: 40px;
-	margin-left:20px;
-	margin-right: 20px;
-	opacity:0;
-	transition: 0.5s all ease-in;
-}
-
-#intro{
-	height: 100px;
-	margin-top: 95px;
-	width: 150px;
-	border-radius: 75px;
-	background-color: whitesmoke;
-	text-align: left;
-	overflow: hidden;
-	display: inline-block;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.692);
-	transition: 0.5s all ease-in;
-}
-
-#seperator{
-	height:0%;
-	width:2px;
-	display: inline-block;
-	background-image: linear-gradient(0deg,#11998e 15%, #38ef7d 85%);
-	transition: 0.4s all ease-in;
-}
 .container{
 	height: 1000px;
 	width: 100%;
@@ -80,20 +28,147 @@ body{
 	margin-bottom: 5em;
 }
 
-#details{
-	vertical-align: top;
-	width: auto;
-	margin-top: 50px;
-	margin-left:20px;
-	margin-right:20px;
-	display:inline-block;
-	font-family: secondFont;
-	font-size: 1em;
-	opacity: 0;
-	transition: 0.5s all ease-in;
+.wrapper{
+	margin-left: 7.5%;
+	margin-right: 7.5%;
+	height: 100%;
+	width: 85%;
 }
 
 h1{
 	font-family: firstFont;
 	font-size: 3em;
+}
+
+
+@media only screen and (max-width: 550px) {
+	#logo{
+		margin-left: 20px;
+		margin-top: 20px;
+		max-width: 75%;
+		max-height: 75%;
+		transform: rotate(0deg);
+	}
+	
+	.header{
+		height: 300px;
+		width: 100%;
+		text-align: center;
+	}
+	
+	#title{
+		display:inline-block;
+		vertical-align: top;
+		margin-top: 40px;
+		margin-left:20px;
+		margin-right: 20px;
+		opacity:0;
+		transition: 0.5s all ease-in;
+	}
+	
+	#intro{
+		height: 150px;
+		margin-top: 75px;
+		width: 150px;
+		border-radius: 75px;
+		background-color: whitesmoke;
+		text-align: left;
+		overflow: hidden;
+		display: inline-block;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.692);
+	}
+	
+	#seperator{
+		display: "none";
+	}
+	.container{
+		height: 1000px;
+		width: 100%;
+		border-radius: 6px;
+		background-color: #F5F5F5;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.692);
+		margin-bottom: 5em;
+	}
+	
+	#details{
+		display: "none";
+	}
+}
+
+
+@media only screen and (min-width:551px){
+
+	#logo{
+		margin-left: 20px;
+		margin-top: 20px;
+		max-width: 75%;
+		max-height: 75%;
+		transform: rotate(160deg);
+		transition: 0.5s all ease-in;
+	}
+
+	.wrapper{
+		margin-left: 7.5%;
+		margin-right: 7.5%;
+		height: 100%;
+		width: 85%;
+	}
+
+	.header{
+		height: 300px;
+		width: 100%;
+		text-align: center;
+	}
+
+	#title{
+		display:inline-block;
+		vertical-align: top;
+		margin-top: 40px;
+		margin-left:20px;
+		margin-right: 20px;
+		opacity:0;
+		transition: 0.5s all ease-in;
+	}
+
+	#intro{
+		height: 100px;
+		margin-top: 95px;
+		width: 150px;
+		border-radius: 75px;
+		background-color: whitesmoke;
+		text-align: left;
+		overflow: hidden;
+		display: inline-block;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.692);
+		transition: 0.5s all ease-in;
+	}
+
+	#seperator{
+		height:0%;
+		width:2px;
+		display: inline-block;
+		background-image: linear-gradient(0deg,#11998e 15%, #38ef7d 85%);
+		transition: 0.4s all ease-in;
+	}
+	.container{
+		height: 1000px;
+		width: 100%;
+		border-radius: 6px;
+		background-color: #F5F5F5;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.692);
+		margin-bottom: 5em;
+	}
+
+	#details{
+		vertical-align: top;
+		width: auto;
+		margin-top: 50px;
+		margin-left:20px;
+		margin-right:20px;
+		display:inline-block;
+		font-family: secondFont;
+		font-size: 1em;
+		opacity: 0;
+		transition: 0.5s all ease-in;
+	}
 }
