@@ -1,5 +1,10 @@
 $(document).ready(function() {
     initanimation();
+    setTimeout(()=>{$("#homel").css("top","0px");} , 75*0);
+    setTimeout(()=>{$("#aboutl").css("top","0px");} , 75*1);
+    setTimeout(()=>{$("#availibilityl").css("top","0px");} , 75*2);
+    setTimeout(()=>{$("#mapsl").css("top","0px");} , 75*3);
+    $("#homel").attr('class', 'optionsOnPage');
 });
 
 //detect resize and remove large elements
@@ -34,4 +39,39 @@ function initanimation(){
         $("#seperator").css("height","0%");
         $("#details").css("opacity", "0");
     }
+}
+
+var currentPage = 0;
+
+function highlight(obj){
+    obj.className = "optionshighlight";
+}
+
+function unhighlight(obj,pageNum){
+    obj.className = "options";
+    if(currentPage == pageNum){
+        obj.className = "optionsOnPage";
+    }
+}
+
+function changeContext(obj,pageNum){
+
+    var formation;
+    currentPage = pageNum;
+
+    switch(pageNum){
+        case 0: formation = ["0%","100%","200%","300%"]; break;
+        case 1: formation = ["-100%","0%","100%","200%"]; break;
+        case 2: formation = ["-200%","-100%","0%","100%"]; break;
+        case 3: formation = ["-300%","-200%","-100%","0%"]; break;
+    }
+    $("#homel").attr('class', 'options');
+    $("#aboutl").attr('class', 'options');
+    $("#availibilityl").attr('class', 'options');
+    $("#mapsl").attr('class', 'options');
+
+    for(var i=0;i<4;i++){
+        $(".fill")[i].style.left = formation[i];
+    }
+    obj.className = "optionsOnPage";
 }

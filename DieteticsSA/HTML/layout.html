@@ -10,9 +10,9 @@
 		<div class="header">
 			<div id="intro">
 				<img id="logo" src="images/logo.png"/>
-				<h1 id="title">Dietetics SA</h1>
+				<h1 class="noselect" id="title">Dietetics SA</h1>
 				<div id="seperator"></div>
-				<div id="details">
+				<div class="noselect" id="details">
 					Andrew Chen<br>
 					achen4824@gmail.com<br>
 					0450554824
@@ -21,11 +21,15 @@
 		</div>
 		<div class="container">
 			<div id="sidebar">
-					<div class="sidecont"><div class="options">Home</div></div>
-					<div class="sidecont"><div class="options">About</div></div>
-					<div class="sidecont"><div class="options">Availibility</div></div>
-					<div class="sidecont"><div class="options">Maps</div></div>
+					<div class="sidecont"><div onclick="changeContext(this,0)" onmouseover="highlight(this)" onmouseout="unhighlight(this,0)" class="options" id="homel">Home</div></div>
+					<div class="sidecont"><div onclick="changeContext(this,1)" onmouseover="highlight(this)" onmouseout="unhighlight(this,1)" class="options" id="aboutl">About</div></div>
+					<div class="sidecont"><div onclick="changeContext(this,2)" onmouseover="highlight(this)" onmouseout="unhighlight(this,2)" class="options" id="availibilityl">Availibility</div></div>
+					<div class="sidecont"><div onclick="changeContext(this,3)" onmouseover="highlight(this)" onmouseout="unhighlight(this,3)" class="options" id="mapsl">Maps</div></div>
 			</div>
+			<div class="fill" id="home"></div>
+			<div class="fill" id="about"></div>
+			<div class="fill" id="availibility"></div>
+			<div class="fill" id="maps"></div>
 		</div>
 	</div>
 
