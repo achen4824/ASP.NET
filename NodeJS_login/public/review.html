@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forknife</title>
+    <link rel="stylesheet" type="text/css" href="Forknife-Styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+    <link href="//db.onlinewebfonts.com/c/cdc8c3de1e6bd5a9a67c6a001f9fedd0?family=Burbank+Big+Condensed"
+        rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="Forknife-Script.js"></script>
+</head>
+
+<body>
+
+    <div class="static">
+        <span class="forknife"><img src="resources/images/Logo/forknife.png"></span>
+        <div id="italian" class="slideshowa">
+            <div class="slideitalian fade">
+                <img src="resources/images/italian/italian_1.jpg">
+            </div>
+            <div class="slideitalian fade">
+                <img src="resources/images/italian/italian_2.jpg">
+            </div>
+            <div class="slideitalian fade">
+                <img src="resources/images/italian/italian_3.jpg">
+            </div>
+            <div class="slideitalian fade">
+                <img src="resources/images/italian/italian_4.jpg">
+            </div>
+        </div>
+        <div id="indian" class="slideshowa">
+            <div class="slideindian fade">
+                <img class="blur" src="resources/images/indian/indian_1.jpg">
+            </div>
+            <div class="slideindian fade">
+                <img class="blur" src="resources/images/indian/indian_2.jpeg">
+            </div>
+            <div class="slideindian fade">
+                <img class="blur" src="resources/images/indian/indian_3.jpg">
+            </div>
+            <div class="slideindian fade">
+                <img class="blur" src="resources/images/indian/indian_4.jpg">
+            </div>
+        </div>
+        <div id="american" class="slideshowa">
+            <div class="slideamerican fade">
+                <img class="blur" src="resources/images/american/american_1.jpg">
+            </div>
+            <div class="slideamerican fade">
+                <img class="blur" src="resources/images/american/american_2.jpg">
+            </div>
+            <div class="slideamerican fade">
+                <img class="blur" src="resources/images/american/american_3.jpg">
+            </div>
+            <div class="slideamerican fade">
+                <img class="blur" src="resources/images/american/american_4.jpg">
+            </div>
+        </div>
+        <div id="chinese" class="slideshowa">
+            <div class="slidechinese fade">
+                <img class="blur" src="resources/images/chinese/chinese_1.jpg">
+            </div>
+            <div class="slidechinese fade">
+                <img class="blur" src="resources/images/chinese/chinese_2.jpg">
+            </div>
+            <div class="slidechinese fade">
+                <img class="blur" src="resources/images/chinese/chinese_3.jpg">
+            </div>
+            <div class="slidechinese fade">
+                <img class="blur" src="resources/images/chinese/chinese_4.jpg">
+            </div>
+        </div>
+    </div>
+
+    <ul id="navbar">
+        <li><a href="Forknife.html">Home</a></li>
+        <!-- href that does nothing onclick-->
+        <li><a href="#" onclick="return false" class="active">Review</a></li>
+        <li><a href="book.html">Book</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="settings.html">Settings</a></li>
+        <li style="float:right;"><a href="#login" onclick="displayLogin()">Login</a></li>
+        <li style="float: right;"><a href="signup.html">Signup</a></li>
+    </ul>
+
+
+    <div class="background-image">
+        <div class="page">
+            <div id="review-options">
+                <form>
+
+                    <input type="text" name="searchbar" class="review-searchbar" placeholder="Search for Reviews.." />
+                </form>
+                <button type="button" onclick="displayReviewInput()"> Write a Review </button>
+            </div>
+
+            <div class="review-area">
+
+            </div>
+
+
+            <!-- Hidden Review Form -->
+            <div id="write-review" class="form-style">
+                <form onsubmit="return false">
+                    <i class="exit-button" onclick="hideModal()"></i>
+                    <span>[Restaurant name]</span>
+                    <br />
+                    <div class="rate">
+                        <input type="radio" id="star5" name="rate" value="5" />
+                        <label for="star5" title="5 star">5 stars</label>
+                        <input type="radio" id="star4" name="rate" value="4" />
+                        <label for="star4" title="4 star">4 stars</label>
+                        <input type="radio" id="star3" name="rate" value="3" />
+                        <label for="star3" title="3 star">3 stars</label>
+                        <input type="radio" id="star2" name="rate" value="2" />
+                        <label for="star2" title="2 star">2 stars</label>
+                        <input type="radio" id="star1" name="rate" value="1" />
+                        <label for="star1" title="1 star">1 star</label>
+                    </div>
+                    <textarea id="textContent" placeholder="How was the food..." class="textAreaReview"></textarea>
+                    <input type="submit" value="Submit" onclick="writeReview()">
+                </form>
+            </div>
+
+            <!-- Hidden Login Form -->
+            <div id="login" class="form-style">
+                <form>
+                    <i class="exit-button" onclick="hideModal()"></i>
+                    Please login to access your account.
+                    <br />
+                    <hr />
+                    Username:
+                    <br />
+                    <input type="text" name="username">
+                    Password:
+                    <input type="text" name="password">
+                    <a href="forgotpasswordredirect">Forgot Password?</a>
+                    <a href="forgotusernameredirect">Forgot Username?</a>
+                    <input type="submit" value="Login" onclick="hideModal()" />
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal"></div>
+
+    <!-- Templates -->
+
+    <template id="reviewTemplate">
+        <div class="review-template">
+
+            {{ Restaurant Name and time }}
+            <div style="float: right;">
+                ★★★★★
+            </div>
+            <p>
+                
+            </p>
+
+        </div>
+    </template>
+
+</body>
+
+</html>
