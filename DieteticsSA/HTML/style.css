@@ -49,6 +49,8 @@ h1{
 	width:100%;
 	height: 60px;
 	background-color: #cdf5e1;
+	top: 0px;
+	position: sticky;
 	text-align:center;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -154,26 +156,21 @@ p{
 	left: 0px;
 	height: 940px;
 	width: 100%;
-	background-color: red;
-	transition: 0.5s all ease-in;
+	transition: 1s all cubic-bezier(.46,.86,.55,.96);
 }
 
 #home{
 	left:0%;
-	background-color:whitesmoke;
 }
 
 #about{
 	left:100%;
-	background-color:whitesmoke;
 }
 #availibility{
 	left:200%;
-	background-color:red;
 }
 #maps{
 	left:300%;
-	background-color:pink;
 }
 
 #profile{
