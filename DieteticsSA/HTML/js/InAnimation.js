@@ -1,10 +1,12 @@
 $(document).ready(function() {
-    initanimation();
-    setTimeout(()=>{$("#homel").css("top","0px");} , 75*0);
-    setTimeout(()=>{$("#aboutl").css("top","0px");} , 75*1);
-    setTimeout(()=>{$("#availibilityl").css("top","0px");} , 75*2);
-    setTimeout(()=>{$("#mapsl").css("top","0px");} , 75*3);
-    $("#homel").attr('class', 'optionsOnPage');
+    setTimeout(()=>{
+        initanimation();
+        setTimeout(()=>{$("#homel").css("top","0px");} , 75*0);
+        setTimeout(()=>{$("#aboutl").css("top","0px");} , 75*1);
+        setTimeout(()=>{$("#availibilityl").css("top","0px");} , 75*2);
+        setTimeout(()=>{$("#mapsl").css("top","0px");} , 75*3);
+        $("#homel").attr('class', 'optionsOnPage');
+    },300);
 });
 
 //detect resize and remove large elements
