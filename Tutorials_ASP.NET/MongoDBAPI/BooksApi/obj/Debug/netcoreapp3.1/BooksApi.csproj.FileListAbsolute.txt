@@ -1,0 +1,6 @@
+C:\Users\Andrew.Chen\Documents\GitHub\ASP.NET\Tutorials_ASP.NET\MongoDBAPI\BooksApi\obj\Debug\netcoreapp3.1\BooksApi.csprojAssemblyReference.cache
+C:\Users\Andrew.Chen\Documents\GitHub\ASP.NET\Tutorials_ASP.NET\MongoDBAPI\BooksApi\obj\Debug\netcoreapp3.1\staticwebassets\BooksApi.StaticWebAssets.Manifest.cache
+C:\Users\Andrew.Chen\Documents\GitHub\ASP.NET\Tutorials_ASP.NET\MongoDBAPI\BooksApi\obj\Debug\netcoreapp3.1\staticwebassets\BooksApi.StaticWebAssets.xml
+C:\Users\Andrew.Chen\Documents\GitHub\ASP.NET\Tutorials_ASP.NET\MongoDBAPI\BooksApi\obj\Debug\netcoreapp3.1\BooksApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Andrew.Chen\Documents\GitHub\ASP.NET\Tutorials_ASP.NET\MongoDBAPI\BooksApi\obj\Debug\netcoreapp3.1\BooksApi.AssemblyInfoInputs.cache
+C:\Users\Andrew.Chen\Documents\GitHub\ASP.NET\Tutorials_ASP.NET\MongoDBAPI\BooksApi\obj\Debug\netcoreapp3.1\BooksApi.AssemblyInfo.cs
